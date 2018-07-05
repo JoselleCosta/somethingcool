@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-image: url("color.jpg");}
+h1   {color: black; font-family: serif; font-size: 40px;}
+p    {color: white; font-size: 30px;}
+.header {
+    background-color: snow;
+    padding: 20px;
+    text-align: center;
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to my dog page</h1>
+</div>
+
+<h1>BIOGRPHY</h1>
+<div style="background-color:lightblue;color:white;padding:30px;">
+  <p>My dog’s name is Lady. She is a small and white maltese. She is five years
+     old and her birthday is December 18. Lady loves to sleep all day but also
+     loves to sit outside and watch peoplwalk by. She likes bananas and will
+     even respond to being called banana or ham. She also likes to eat mango
+     skins and small tennis balls that actually fit in her mouth. Yesterday I
+     took her for a bike ride around the block and she stopped to smell
+     flowers and eat grass.</p>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="IMG_2001.jpg">
+      <img src="IMG_2001.jpg" alt="Lady" height="300px">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="IMG_3871.jpg">
+      <img src="IMG_3871.jpg" alt="The" height= "200px">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="IMG_5017.jpg">
+      <img src="IMG_5017.jpg" alt="Dog" height="300px">
+    </a>
+    <div class="desc"></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+
+</div>
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">TIME</button>
+
+<script>
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+	</body>
+</html>
